@@ -10,8 +10,8 @@ int findCeilIndex(int arr[], int size, int x) {
         int mid = (low + high) / 2;
 
         if (arr[mid] >= x) {
-            result = mid;       // potential answer
-            high = mid - 1;     // look for earlier occurrence
+            result = mid;       
+            high = mid - 1;     
         } else {
             low = mid + 1;
         }
@@ -23,7 +23,6 @@ int main() {
     int size = sizeof(arr) / sizeof(arr[0]);
     int x;
 
-    // Input x
     scanf("%d", &x);
 
     int index = findCeilIndex(arr, size, x);
