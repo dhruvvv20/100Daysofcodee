@@ -20,9 +20,9 @@ Gender getGender(char *gStr) {
 }
 int main() {
     char gStr[20];
-    scanf("%s", gStr);   // Input format: Gender=MALE
+    scanf("%s", gStr);   
     char *value = strchr(gStr, '=');
-    if (value != NULL) value++;  // move past '='
+    if (value != NULL) value++;  
     Person p;
     p.gender = getGender(value);
     switch (p.gender) {
