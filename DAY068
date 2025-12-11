@@ -1,5 +1,6 @@
 /*Q118: Write a program to take an input array of size n. 
 The array should contain all the integers between 0 to n except for one. Print that missing number*/
+
 #include <stdio.h>
 int main() {
     int n;
@@ -10,9 +11,7 @@ int main() {
         scanf("%d", &nums[i]);
         sum += nums[i];
     }
-    // Expected sum of numbers from 0 to n
     int expectedSum = (n * (n + 1)) / 2;
-    // Missing number = expectedSum - actualSum
     int missing = expectedSum - sum;   
     printf("%d\n", missing);
     return 0;
