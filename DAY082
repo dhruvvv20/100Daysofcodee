@@ -1,7 +1,7 @@
 //Q132: Define an enum for traffic lights (RED, YELLOW, GREEN) and print 'Stop', 'Wait', or 'Go' based on its value.
+
 #include <stdio.h>
 #include <string.h>
-// Define enumeration for traffic lights
 enum TrafficLight {
     RED,
     YELLOW,
@@ -11,7 +11,6 @@ int main() {
     char input[10];
     scanf("%s", input);
     enum TrafficLight light;
-    // Match input string to enum value
     if (strcmp(input, "RED") == 0) {
         light = RED;
     } else if (strcmp(input, "YELLOW") == 0) {
@@ -22,7 +21,6 @@ int main() {
         printf("Invalid input\n");
         return 0;
     }
-    // Print action based on traffic light
     switch (light) {
         case RED:
             printf("Stop\n");
