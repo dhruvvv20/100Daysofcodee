@@ -1,17 +1,16 @@
 //Q128: Read a text file and count how many vowels and consonants are in the file. Ignore digits and special characters.
+
 #include <stdio.h>
-#include <ctype.h>  // for isalpha(), tolower()
+#include <ctype.h>  
 int main() {
     FILE *fp;
     char ch;
     int vowels = 0, consonants = 0;
-    // Open file in read mode
     fp = fopen("text.txt", "r");
     if (fp == NULL) {
         printf("Error! Could not open file.\n");
         return 1;
     }
-    // Read file character by character
     while ((ch = fgetc(fp)) != EOF) {
         if (isalpha(ch)) {  // Only process alphabetic characters
             ch = tolower(ch);  // Convert to lowercase for uniformity
@@ -22,7 +21,6 @@ int main() {
         }
     }
     fclose(fp);
-    // Print results
     printf("Vowels: %d\n", vowels);
     printf("Consonants: %d\n", consonants);
     return 0;
