@@ -1,7 +1,7 @@
 //Q133: Create an enum for months and print how many days each month has.
+
 #include <stdio.h>
 #include <string.h>
-// Define enumeration for months
 enum Months {
     JAN, FEB, MAR, APR, MAY, JUN,
     JUL, AUG, SEP, OCT, NOV, DEC
@@ -10,7 +10,6 @@ int main() {
     char input[10];
     scanf("%s", input);
     enum Months month;
-    // Map input string to enum value
     if (strcmp(input, "JAN") == 0) month = JAN;
     else if (strcmp(input, "FEB") == 0) month = FEB;
     else if (strcmp(input, "MAR") == 0) month = MAR;
