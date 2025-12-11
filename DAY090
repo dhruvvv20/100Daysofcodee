@@ -1,19 +1,17 @@
 //Q140: Define a struct with enum Gender and print person's gender.
+
 #include <stdio.h>
 #include <string.h>
-// Define enum for Gender
 typedef enum {
     MALE,
     FEMALE,
     OTHER,
     INVALID
 } Gender;
-// Define struct Person with Gender
 typedef struct {
     char name[50];
     Gender gender;
 } Person;
-// Function to convert string to enum
 Gender getGender(char *gStr) {
     if (strcmp(gStr, "MALE") == 0) return MALE;
     else if (strcmp(gStr, "FEMALE") == 0) return FEMALE;
@@ -23,7 +21,6 @@ Gender getGender(char *gStr) {
 int main() {
     char gStr[20];
     scanf("%s", gStr);   // Input format: Gender=MALE
-    // Extract actual value after "Gender="
     char *value = strchr(gStr, '=');
     if (value != NULL) value++;  // move past '='
     Person p;
